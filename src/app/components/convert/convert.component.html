@@ -1,0 +1,9 @@
+<section>
+  <h1 class="csv-title">CSV Data:</h1>
+  <textarea #textarea1 [value]="csvData" class="csv-textarea"></textarea>
+  <span class="convert" (click)="csv2json(textarea1.value)">
+    Convert<span>></span>
+  </span>
+  <h1 class="json-title">JSON Data:</h1>
+  <textarea #textarea2 [value]="jsonData" class="json-textarea"></textarea>
+</section>

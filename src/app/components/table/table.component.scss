@@ -1,0 +1,16 @@
+@import '../../../styles.scss';
+
+table {
+  width          : 100%;
+  border-collapse: collapse;
+
+  th {
+    background-color: $green2;
+    border          : none;
+    text-align      : left;
+  }
+
+  td {
+    border-bottom: 1px solid $green3;
+  }
+}

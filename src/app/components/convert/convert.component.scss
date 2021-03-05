@@ -1,0 +1,57 @@
+@import '../../../styles.scss';
+
+section {
+  display              : grid;
+  grid-template-columns: auto min-content auto;
+  grid-template-rows   : min-content 150px;
+  grid-template-areas  :
+    "title1 title1 title2"
+    "block1 button block2";
+  margin-bottom: $spacing4;
+
+  textarea {
+    font-size  : 1.2rem;
+    color      : $black;
+    opacity    : 0.65;
+    font-weight: 400;
+    border     : 1px solid $white;
+    outline    : none;
+
+    &:focus {
+      border: 1px solid $green1;
+    }
+  }
+
+  .convert {
+    grid-area  : button;
+    align-self : center;
+    margin     : 0 $spacing3;
+    padding    : $spacing2;
+    width      : min-content;
+    height     : min-content;
+    font-size  : 1.2rem;
+    color      : $green1;
+    font-weight: 500;
+    cursor     : pointer;
+
+    span {
+      margin-left: $spacing1;
+    }
+  }
+}
+
+.csv-textarea {
+  grid-area: block1;
+}
+
+.json-textarea {
+  grid-area: block2;
+}
+
+.csv-title {
+  grid-area: title1;
+}
+
+.json-title {
+  grid-area: title2;
+}

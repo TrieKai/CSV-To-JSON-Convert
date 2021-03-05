@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+// spacing
+$spacing1: 8px;
+$spacing2: 16px;
+$spacing3: 24px;
+$spacing4: 48px;
+
+// color
+$black  : #000;
+$white  : #d9d9d9;
+$green1 : #9ac13b;
+$green2 : #f5f9eb;
+$green3 : #e1ecc4;
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin     : 0 0 $spacing2 0;
+  color      : $black;
+  font-size  : 1.85rem;
+  font-weight: 700;
+  opacity    : 0.85;
+}
+
+h4 {
+  color      : $black;
+  font-size  : 1.2rem;
+  font-weight: 500;
+  opacity    : 0.85;
+}
+
+p {
+  color      : $black;
+  font-size  : 1.2rem;
+  font-weight: 400;
+  opacity    : 0.65;
+}
+
+// breakpoint
+@mixin breakpoint($point) {
+  @if $point==large {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @else if $point==middle {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+}

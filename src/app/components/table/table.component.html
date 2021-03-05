@@ -1,0 +1,19 @@
+<h1>Table</h1>
+<table>
+  <tr>
+    <th *ngFor="let header of headers">
+      <h4>{{header}}</h4>
+    </th>
+    <th *ngIf="dataList.length > 0">
+      <h4>Delete</h4>
+    </th>
+  </tr>
+  <tr *ngFor="let data of dataList; let i = index;">
+    <td *ngFor="let item of data">
+      <p>{{item}}</p>
+    </td>
+    <td>
+      <button (click)="delete(i)">Delete</button>
+    </td>
+  </tr>
+</table>
