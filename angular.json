@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "CSV-To-JSON-Convert"
+  "defaultProject": "CSV-To-JSON-Convert",
+  "cli": {
+    "analytics": false
+  }
 }
